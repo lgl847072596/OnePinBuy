@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="android-framework-inject">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/android-framework-inject.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
