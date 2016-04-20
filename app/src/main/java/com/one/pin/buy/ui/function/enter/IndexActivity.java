@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.one.pin.buy.R;
+import com.one.pin.buy.tool.IntentUtil;
 import com.one.pin.buy.ui.base.BaseActivity;
 
 public class IndexActivity extends BaseActivity{
@@ -12,7 +13,6 @@ public class IndexActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index_activity);
-
-        startActivity(new Intent(this,LoginActivity.class));
+        IntentUtil.startActivityWithFinish(context,LoginActivity.class,null);
     }
 }

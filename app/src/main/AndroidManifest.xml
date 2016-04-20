@@ -6,20 +6,21 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".ui.PinApplication"
+        android:name="com.one.pin.buy.ui.PinApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.function.enter.IndexActivity">
+        <activity android:name="com.one.pin.buy.ui.function.enter.IndexActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.function.enter.LoginActivity"></activity>
+        <activity android:name="com.one.pin.buy.ui.function.enter.LoginActivity"></activity>
+        <activity android:name="com.one.pin.buy.ui.function.enter.HomeActivity"></activity>
     </application>
 
 </manifest>

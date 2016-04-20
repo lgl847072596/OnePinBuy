@@ -82,8 +82,7 @@ public class AppException extends Exception implements UncaughtExceptionHandler 
 			return false;
 			
 		}
-		
-		System.out.println("【异常日志】"+getStackTrace(ex));
+		LogTool.e("应用崩溃",""+getStackTrace(ex));
 
 		final Activity activity = AFWAppManager.getAppManager().currentActivity();
 

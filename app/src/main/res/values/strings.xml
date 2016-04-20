@@ -4,4 +4,6 @@
     <string name="login_password">密码</string>
     <string name="login">登录</string>
     <string name="register">注册</string>
+
+    <string name="fxgl">风险管理</string>
 </resources>

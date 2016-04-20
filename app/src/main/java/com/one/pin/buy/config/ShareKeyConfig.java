@@ -14,6 +14,10 @@ public class ShareKeyConfig {
 
 
     //局部使用_PRIVATE
+    //用户名
+    public static final String ACCOUNT_PRIVATE="user_account";
+    //密码
+    public static final String PASSWORD_PRIVATE="user_password";
 
 
 

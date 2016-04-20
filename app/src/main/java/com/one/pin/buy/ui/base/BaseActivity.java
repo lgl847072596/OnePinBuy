@@ -21,8 +21,8 @@ public class BaseActivity extends Activity{
     private String tag="";
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         AFWAppManager.getAppManager().addActivity(context);
     }
 
@@ -35,8 +35,8 @@ public class BaseActivity extends Activity{
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         AFWAppManager.getAppManager().removeActivity(context);
+        super.onDestroy();
     }
 
     @Override

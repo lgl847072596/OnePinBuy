@@ -2,9 +2,13 @@ package com.one.pin.buy.ui;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.backends.okhttp.OkHttpImagePipelineConfigFactory;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.one.pin.buy.tool.AppContextTools;
 import com.one.pin.buy.tool.AppException;
 import com.one.pin.buy.tool.ShardPreferenceTool;
+import com.one.pin.buy.tool.http.OKHttpTool;
 import com.ylzinfo.android.inject.ResourceHelper;
 
 /**
@@ -32,6 +36,12 @@ public class PinApplication extends Application {
             ResourceHelper.init(getApplicationContext());
             //xml操作初始化
             ShardPreferenceTool.getInstance(getApplicationContext());
+            //frecso初始化
+            ImagePipelineConfig config = OkHttpImagePipelineConfigFactory
+                    .newBuilder(getApplicationContext(), OKHttpTool.okHttpClient)
+                    .build();
+            Fresco.initialize(getApplicationContext(), config);
+
         }
 
     }
